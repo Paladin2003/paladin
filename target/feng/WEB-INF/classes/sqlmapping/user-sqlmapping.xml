@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+  <mapper namespace="USER">
+  	<select id="QUERY_USER_INFO_BY_ACCOUNT" parameterType="java.util.HashMap" resultType="com.paladin.feng.dto.User">  
+  			SELECT account, name,mail,phone from user_info where account = #{account} 
+	</select>   
+	<update id="UPDATE_USER_INFO" parameterType="java.util.HashMap">  
+  			update USER_INFO A  SET A.NAME = #{name},A.MAIL = #{mail},A.PHONE = #{phone} WHERE A.ACCOUNT = #{account}
+	</update>  
+  </mapper>

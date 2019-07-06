@@ -32,7 +32,7 @@ public class LoginController {
 		User user = userDao.getUserInfo(loginParam);
 		System.out.println("user=====" +user);
 		request.setAttribute("user", user);
-		return "userInfo";
+		return "userInfo"; 
 	}
 	
 	@ResponseBody
